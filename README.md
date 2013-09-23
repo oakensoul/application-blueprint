@@ -24,7 +24,7 @@ Installation with Composer
 --------------------------
 The initial creation of a project should be done by performing a clone using composer; make sure to answer "Yes" when it prompts `Do you want to remove the existing VCS (.git, .svn..) history?`.
 ```
-composer create-project -sdev --repository-url="https://github.com/" oakensoul/application-skeleton replace/with/path/to/install
+composer create-project -sstable oakensoul/application-skeleton replace/with/path/to/install
 ```
 
 Generate a Configuration File
