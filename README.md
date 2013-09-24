@@ -35,7 +35,7 @@ Generate Your Virtual Host
 --------------------------
 To generate a virtual host you need to run the packaged cli script. Note, this depends on the oakensoul/Cornerstone module to run.
 ```
-./cornerstone.php vhost build --env=<environment>
+./cornerstone.php application build-vhost --env=<environment>
 ```
 
 Update the `module` Folder
