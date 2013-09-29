@@ -121,10 +121,10 @@ $application_config['module_listener_options']['check_dependencies'] = $check_de
  * May contain one or more child arrays.
  *
  * array(
- * 'service_manager' => $stringServiceManagerName,
- * 'config_key' => $stringConfigKey,
- * 'interface' => $stringOptionalInterface,
- * 'method' => $stringRequiredMethodName,
+ *   'service_manager' => $stringServiceManagerName,
+ *   'config_key' => $stringConfigKey,
+ *   'interface' => $stringOptionalInterface,
+ *   'method' => $stringRequiredMethodName,
  * ),
  *
  * @var array $service_manager

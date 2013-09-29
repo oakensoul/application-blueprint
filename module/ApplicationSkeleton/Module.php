@@ -27,4 +27,19 @@ class Module
             )
         );
     }
+
+    public function getServiceConfig ()
+    {
+        $factories = array ();
+
+        $invokables = array ();
+        $invokables['Application\Controller\Index'] = 'ApplicationSkeleton\Controller\IndexController';
+
+        $service_config = array (
+            'factories' => $factories,
+            'invokables' => $invokables
+        );
+
+        return $service_config;
+    }
 }

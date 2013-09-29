@@ -19,31 +19,6 @@
  */
 $router = array ();
 
-// $router['routes']['home']['child_routes']['example'] = array (
-//     'type' => 'Segment',
-//     'may_terminate' => true,
-//     'options' => array (
-//         'route' => 'example[/]',
-//         'defaults' => array (
-//             'controller' => 'Skeleton\Controller\Example'
-//         )
-//     )
-// );
-
-/**
- * To add a new controller...
- *
- * In this case, we're going to overload the default Application\Controller\Index
- * provided by Cornerstone so that we have our own, and our own documentation
- *
- * http://framework.zend.com/manual/2.2/en/user-guide/routing-and-controllers.html
- */
-$controllers = array (
-    'invokables' => array (
-        'Application\Controller\Index' => 'ApplicationSkeleton\Controller\IndexController'
-    )
-);
-
 /**
  * Working with Views
  *
@@ -60,7 +35,6 @@ $view_manager = array (
 
 $config = array ();
 $config['router'] = $router;
-$config['controllers'] = $controllers;
 $config['view_manager'] = $view_manager;
 
 return $config;
