@@ -7,16 +7,16 @@
     "packages": [
         {
             "name": "oakensoul/Cornerstone",
-            "version": "0.0.5",
+            "version": "0.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oakensoul/Cornerstone.git",
-                "reference": "9e16486585e8b7437465a650fbcd4bf9e846f65e"
+                "reference": "0f178ef4f3b855a0d7ddae215aa0d5354eddb7a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oakensoul/Cornerstone/zipball/9e16486585e8b7437465a650fbcd4bf9e846f65e",
-                "reference": "9e16486585e8b7437465a650fbcd4bf9e846f65e",
+                "url": "https://api.github.com/repos/oakensoul/Cornerstone/zipball/0f178ef4f3b855a0d7ddae215aa0d5354eddb7a5",
+                "reference": "0f178ef4f3b855a0d7ddae215aa0d5354eddb7a5",
                 "shasum": ""
             },
             "require": {
@@ -53,10 +53,10 @@
                 "zf2"
             ],
             "support": {
-                "source": "https://github.com/oakensoul/Cornerstone/tree/0.0.5",
+                "source": "https://github.com/oakensoul/Cornerstone/tree/0.0.7",
                 "issues": "https://github.com/oakensoul/Cornerstone/issues"
             },
-            "time": "2013-09-29 02:12:05"
+            "time": "2013-09-29 04:32:41"
         },
         {
             "name": "phpunit/php-code-coverage",

@@ -33,7 +33,6 @@ class Module
         $factories = array ();
 
         $invokables = array ();
-        $invokables['Application\Controller\Index'] = 'ApplicationSkeleton\Controller\IndexController';
 
         $service_config = array (
             'factories' => $factories,

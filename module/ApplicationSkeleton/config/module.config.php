@@ -13,11 +13,20 @@
  *
  * Note: The "home" route comes from the oakensoul/Cornerstone module
  *
- * @see https://github.com/oakensoul/Cornerstone
- *
- * http://framework.zend.com/manual/2.2/en/modules/zend.mvc.routing.html
+ * @see https://github.com/oakensoul/Cornerstone http://framework.zend.com/manual/2.2/en/modules/zend.mvc.routing.html
  */
 $router = array ();
+
+/**
+ * To add a new controller...
+ *
+ * http://framework.zend.com/manual/2.2/en/user-guide/routing-and-controllers.html
+ */
+$controllers = array (
+    'invokables' => array (
+        'Application\Controller\Index' => 'ApplicationSkeleton\Http\Controller\IndexController'
+    )
+);
 
 /**
  * Working with Views
@@ -25,7 +34,7 @@ $router = array ();
  * http://framework.zend.com/manual/2.2/en/modules/zend.view.quick-start.html
  */
 $view_manager = array (
-    'template_map' => array(
+    'template_map' => array (
         'application/index/index' => __DIR__ . '/../view/application/index/index.phtml'
     ),
     'template_path_stack' => array (
@@ -35,6 +44,7 @@ $view_manager = array (
 
 $config = array ();
 $config['router'] = $router;
+$config['controllers'] = $controllers;
 $config['view_manager'] = $view_manager;
 
 return $config;

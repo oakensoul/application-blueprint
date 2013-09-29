@@ -7,7 +7,7 @@
  * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause
  * @package Cornerstone
  */
-namespace ApplicationSkeleton\Controller;
+namespace ApplicationSkeleton\Http\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -19,6 +19,7 @@ class IndexController extends AbstractActionController
     {
         $view = new ViewModel();
         $view->setTemplate('application/index/index');
+
         return $view;
     }
 }
