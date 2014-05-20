@@ -2,6 +2,9 @@
 .idea
 .project
 /.settings
+/.idea
 /vendor
 /data/cache
-/config/autoload/local.php
+/data/vhost
+/config/autoload/*.php
+/config/autoload/*.json
