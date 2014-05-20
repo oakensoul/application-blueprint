@@ -1,4 +1,4 @@
-Cornerstone - ZF2 Skeleton Application
+ZF2 Application Skeleton
 ===========================
 
 Introduction

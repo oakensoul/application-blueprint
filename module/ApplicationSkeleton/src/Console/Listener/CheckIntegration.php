@@ -18,6 +18,16 @@ use Cornerstone\EventManager\Console;
 use Zend\Config\Config;
 use Zend\Console\Response;
 
+/**
+ * This Listener is placed as an example of an implementation that you should provide
+ * so that you can check and make sure that your integration points are working
+ * successfully. For instance if you were using a rest endpoint, you could execute
+ * listeners like this to make sure the integration actually works.
+ *
+ * This is an EXAMPLE so that the command itself can run at build time, etc.
+ *
+ * @author oakensoul
+ */
 class CheckIntegration extends EventManager\AbstractListenerAggregate implements ServiceManager\ServiceLocatorAwareInterface
 {
 
@@ -42,8 +52,12 @@ class CheckIntegration extends EventManager\AbstractListenerAggregate implements
         {
             $console = $this->getServiceLocator()->get('console');
 
-            $config = $this->getServiceLocator()->get('Config');
-            $config = new Config($config);
+//            $config = $this->getServiceLocator()->get('Config');
+//            $config = new Config($config);
+
+            /**
+             * Place code here to check whether the configured endpoints are properly integrated or not.
+             */
 
             if (true == $pEvent->getVerboseFlag())
             {
@@ -55,7 +69,13 @@ class CheckIntegration extends EventManager\AbstractListenerAggregate implements
 
                 $console->write(' --------------- ', ColorInterface::LIGHT_GREEN);
                 $console->writeLine('-----------------------------------------------------------', ColorInterface::YELLOW);
+
+                /**
+                 * Place some verbose logging here for whatever you're checking above. Whether it passed/failed etc.
+                 */
             }
+
+            return NULL;
         }
         catch (Exception $e)
         {
@@ -69,7 +89,7 @@ class CheckIntegration extends EventManager\AbstractListenerAggregate implements
     /**
      * Set service locator
      *
-     * @param ServiceLocatorInterface $serviceLocator
+     * @param ServiceManager\ServiceLocatorInterface $serviceLocator
      */
     public function setServiceLocator (ServiceManager\ServiceLocatorInterface $serviceLocator)
     {
@@ -79,7 +99,7 @@ class CheckIntegration extends EventManager\AbstractListenerAggregate implements
     /**
      * Get service locator
      *
-     * @return ServiceLocatorInterface
+     * @return ServiceManager\ServiceLocatorInterface
      */
     public function getServiceLocator ()
     {

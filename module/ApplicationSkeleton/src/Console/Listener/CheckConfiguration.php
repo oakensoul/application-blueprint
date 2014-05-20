@@ -22,6 +22,10 @@ use Zend\Console\Response;
  * This Listener is placed as an example of an implementation that you should provide
  * if your derived module requires any Configuration listeners.
  *
+ * This is an EXAMPLE so that the command itself can run at build time, etc. The purpose
+ * is for a developer to add required configs that must be set to the "check" so that it
+ * will fail if the value is not properly set.
+ *
  * @author oakensoul
  */
 class CheckConfiguration extends EventManager\AbstractListenerAggregate implements ServiceManager\ServiceLocatorAwareInterface
@@ -49,7 +53,6 @@ class CheckConfiguration extends EventManager\AbstractListenerAggregate implemen
             $console = $this->getServiceLocator()->get('console');
 
             $config = $this->getServiceLocator()->get('Config');
-            $config = new Config($config);
 
             if (true == $pEvent->getVerboseFlag())
             {
@@ -61,7 +64,46 @@ class CheckConfiguration extends EventManager\AbstractListenerAggregate implemen
 
                 $console->write(' --------------- ', ColorInterface::LIGHT_GREEN);
                 $console->writeLine('-----------------------------------------------------------', ColorInterface::YELLOW);
+
+                /**
+                 * Place some verbose logging here for whatever you're checking above. Whether it passed/failed etc.
+                 */
             }
+
+            /**
+             * Place code here to check the configuration value's existence, or to make sure it's set, etc.
+             * It might be worth placing a NULL config variable in the module.config.php file so that
+             * you can check to see what its value is. If you need something where NULL is an acceptable
+             * value you may want to set a dummy unacceptable value, etc.
+             */
+
+            if ( 'example' == $config['Installation']['Vhost']['Server']['Domain'] )
+            {
+                $error_message = 'Application config error, Installation->Vhost->Server->Domain is still set to default value.';
+
+                if (true == $pEvent->getVerboseFlag())
+                {
+                    $console->write("       [Failure] ", ColorInterface::RED);
+                    $console->writeLine($error_message . PHP_EOL, ColorInterface::RED);
+                }
+
+                throw new Exception($error_message);
+            }
+
+            if ( 'app-skeleton.' == $config['Installation']['Vhost']['Server']['Region'] )
+            {
+                $error_message = 'Application config error, Installation->Vhost->Server->Region is still set to default value.';
+
+                if (true == $pEvent->getVerboseFlag())
+                {
+                    $console->write("       [Failure] ", ColorInterface::RED);
+                    $console->writeLine($error_message . PHP_EOL, ColorInterface::RED);
+                }
+
+                throw new Exception($error_message);
+            }
+
+            return NULL;
         }
         catch (Exception $e)
         {
@@ -75,7 +117,7 @@ class CheckConfiguration extends EventManager\AbstractListenerAggregate implemen
     /**
      * Set service locator
      *
-     * @param ServiceLocatorInterface $serviceLocator
+     * @param ServiceManager\ServiceLocatorInterface $serviceLocator
      */
     public function setServiceLocator (ServiceManager\ServiceLocatorInterface $serviceLocator)
     {
@@ -85,7 +127,7 @@ class CheckConfiguration extends EventManager\AbstractListenerAggregate implemen
     /**
      * Get service locator
      *
-     * @return ServiceLocatorInterface
+     * @return ServiceManager\ServiceLocatorInterface
      */
     public function getServiceLocator ()
     {
