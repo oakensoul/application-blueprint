@@ -5,6 +5,7 @@
 .settings
 /config/autoload/*.php
 /config/autoload/*.json
+/cookbooks
 /data/cache
 /data/vhost
 /vendor
