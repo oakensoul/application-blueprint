@@ -2,9 +2,9 @@
 /**
  *
  * @author Oakensoul (http://www.oakensoul.com/)
- * @link https://github.com/oakensoul/Cornerstone for the canonical source repository
- * @copyright Copyright (c) 2013 Robert Gunnar Johnson Jr.
- * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause
+ * @link https://github.com/web-masons/application-blueprint for the canonical source repository
+ * @copyright Copyright (c) 2013 Robert Gunnar Johnson Jr. and Project Contributors
+ * http://opensource.org/licenses/Apache-2.0 Apache-2.0-Clause
  * @package Cornerstone
  */
 
@@ -24,7 +24,7 @@ $application_config = array ();
 
 $modules = array (
     'Cornerstone',
-    'ApplicationSkeleton'
+    'ApplicationBlueprint'
 );
 $application_config['modules'] = $modules;
 

@@ -2,12 +2,12 @@
 /**
  *
  * @author Oakensoul (http://www.oakensoul.com/)
- * @link https://github.com/oakensoul/Cornerstone for the canonical source repository
- * @copyright Copyright (c) 2013 Robert Gunnar Johnson Jr.
- * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause
+ * @link https://github.com/web-masons/application-blueprint for the canonical source repository
+ * @copyright Copyright (c) 2013 Robert Gunnar Johnson Jr. and Project Contributors
+ * http://opensource.org/licenses/Apache-2.0 Apache-2.0-Clause
  * @package Cornerstone
  */
-namespace ApplicationSkeleton;
+namespace ApplicationBlueprint;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
@@ -29,8 +29,8 @@ class Module
         $cornerstone_event_manager = $service_manager->get('Application\EventManager');
 
         /* attach our CLI strategies */
-        $service_manager->get('ApplicationSkeleton\Console\CheckConfiguration')->attach($cornerstone_event_manager);
-        $service_manager->get('ApplicationSkeleton\Console\CheckIntegration')->attach($cornerstone_event_manager);
+        $service_manager->get('ApplicationBlueprint\Console\CheckConfiguration')->attach($cornerstone_event_manager);
+        $service_manager->get('ApplicationBlueprint\Console\CheckIntegration')->attach($cornerstone_event_manager);
     }
 
     public function getConfig ()
@@ -55,8 +55,8 @@ class Module
 
         $invokables = array ();
 
-        $invokables['ApplicationSkeleton\Console\CheckConfiguration'] = 'ApplicationSkeleton\Console\Listener\CheckConfiguration';
-        $invokables['ApplicationSkeleton\Console\CheckIntegration'] = 'ApplicationSkeleton\Console\Listener\CheckIntegration';
+        $invokables['ApplicationBlueprint\Console\CheckConfiguration'] = 'ApplicationBlueprint\Console\Listener\CheckConfiguration';
+        $invokables['ApplicationBlueprint\Console\CheckIntegration'] = 'ApplicationBlueprint\Console\Listener\CheckIntegration';
 
         $service_config = array (
             'factories' => $factories,

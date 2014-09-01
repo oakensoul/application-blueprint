@@ -9,7 +9,7 @@ configuration. The Global configuration and Environment specific configuration.
 Global Configuration
 ------------
 The Global configuration file is for exactly what you think it might be. Global configuration for
-the ZF2 application. The only words of wisdom (?) here woudl be to keep as much out of the global
+the ZF2 application. The only words of wisdom (?) here would be to keep as much out of the global
 configuration and in module configuration as possible. These values really should represent the
 bare minimum of mandatory overrides from module configuration or things that really can't be
 defined in module configuration (and aren't environment specific).
