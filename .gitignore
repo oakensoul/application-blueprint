@@ -1,8 +1,8 @@
 .buildpath
 .idea
 .project
-/.settings
-/.idea
+.vagrant
+.settings
 /vendor
 /data/cache
 /data/vhost

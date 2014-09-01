@@ -1,0 +1,10 @@
+{
+  "Installation": {
+    "Vhost": {
+      "Server": {
+        "Domain": "application-blueprint.com",
+        "Region": "vagrant.www."
+      }
+    }
+  }
+}

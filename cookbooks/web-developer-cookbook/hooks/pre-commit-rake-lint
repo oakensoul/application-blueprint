@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+function unstaged_changes {
+    ! git diff --quiet
+}
+
+if unstaged_changes; then
+    git stash save --keep-index "Performing partial commit against `git rev-parse HEAD`"
+fi
+
+exec time bundle exec rake precommit
