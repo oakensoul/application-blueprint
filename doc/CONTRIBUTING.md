@@ -15,7 +15,7 @@ comes with a full set of files to start your own site. However, it is sparse
 and allows you to derive your own implementation (and rightfully so!).
 It gives you everything you need to pave your own way.
 
-Cornerstone (and its partner [skeleton-application](https://github.com/oakensoul/application-skeleton)
+Cornerstone (and its partner [skeleton-application](https://github.com/web-masons/application-blueprint)
 is a replacement (or feature extension really) for community skeleton-app.
 It provides a few pre-paved roads for you to build on because it's not meant for
 everyone out there, just the folks that like what it does and want to use it.
