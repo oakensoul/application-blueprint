@@ -61,7 +61,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ]
 
         chef.json = {
-
+            'cornerstone-vagrant' => {
+                'project' => 'application-blueprint'
+            }
         }
 
         boxes[server[:type]][:recipes].each do |recipe|

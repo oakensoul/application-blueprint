@@ -1,18 +1,10 @@
 DEPENDENCIES
-  apache2
-  application-blueprint
-    path: .
-    metadata: true
-  apt
-  build-essential
   chef-ruby-ppa
     git: https://github.com/oakensoul/chef-ruby-ppa.git
     revision: db7880d19e44353aa0afb7bc964ff4205e16af2c
-  composer
   cornerstone-vagrant
-    git: https://github.com/web-masons/cornerstone-vagrant-cookbook.git
-    revision: 7bff84fa0d2d663e88aa368c3e6cff288a77aa77
-  freebsd (= 0.1.4)
+    path: .
+    metadata: true
   git
     git: https://github.com/jssjr/git.git
     revision: b1bca76aaf3a3a2131744f17f6e5087e22fa3c40
@@ -25,6 +17,7 @@ DEPENDENCIES
   php-webserver
     git: https://github.com/turbine-web/php-webserver.git
     revision: 8be1397d1e06e610eb4218c1087feefecf5d9817
+  platform_packages
   web-developer-cookbook
     git: https://github.com/turbine-web/web-developer-cookbook.git
     revision: f317e48ddec231dbdd8252d41474a927fef0d75d
@@ -36,9 +29,6 @@ GRAPH
     iptables (>= 0.0.0)
     logrotate (>= 0.0.0)
     pacman (>= 0.0.0)
-  application-blueprint (1.0.0)
-    php-webserver (>= 0.0.0)
-    web-developer-cookbook (>= 0.0.0)
   apt (2.5.3)
   ark (0.9.0)
     7-zip (>= 0.0.0)
@@ -57,7 +47,6 @@ GRAPH
     platform_packages (>= 0.0.0)
     web-developer-cookbook (>= 0.0.0)
   dmg (2.2.0)
-  freebsd (0.1.4)
   git (4.0.3)
     build-essential (>= 0.0.0)
     dmg (>= 0.0.0)

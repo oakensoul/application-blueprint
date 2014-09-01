@@ -3,8 +3,8 @@
 .project
 .vagrant
 .settings
-/vendor
-/data/cache
-/data/vhost
 /config/autoload/*.php
 /config/autoload/*.json
+/data/cache
+/data/vhost
+/vendor

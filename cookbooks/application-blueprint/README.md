@@ -75,7 +75,7 @@ Update Configuration Files
 --------------------------
 ### config/application.config.php
 
-Update the `$modules` array and change `Application` to your module name (e.g., NewModuleName).
+Update the `$modules` array and change `ApplicationBlueprint` to your module name (e.g., NewModuleName).
 ```
 $modules = array (
     'Application',
@@ -99,15 +99,15 @@ Change the value of the `Region` key to match your module slug
 Change the value of the `Domain` key to match your domain
 
 For example, when I test any of my modules I tend to set them up as:
-  http://module-name.oakensoul.com/
+  http://vagrant.modulename.application-blueprint.com/
 
 ```
 return array (
     'Installation' => array (
         'Vhost' => array (
             'Server' => array (
-                'Domain' => 'oakensoul',
-                'Region' => 'skeleton-application.'
+                'Domain' => 'application-blueprint',
+                'Region' => 'vagrant.www.'
             )
         )
     )
@@ -122,7 +122,7 @@ return array (
         'Vhost' => array (
             'Server' => array (
                 'Domain' => 'oakensoul',
-                'Region' => 'module-name.'
+                'Region' => 'vagrant.module-name.'
             )
         )
     )

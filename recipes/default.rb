@@ -9,7 +9,6 @@
 # Package: Cornerstone
 #
 
-include_recipe 'php-webserver'
-include_recipe 'web-developer-cookbook'
+include_recipe 'cornerstone-vagrant'
 
 gem_package 'bootstrap-sass'

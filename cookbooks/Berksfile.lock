@@ -9,6 +9,9 @@ DEPENDENCIES
     git: https://github.com/oakensoul/chef-ruby-ppa.git
     revision: db7880d19e44353aa0afb7bc964ff4205e16af2c
   composer
+  cornerstone-vagrant
+    git: https://github.com/web-masons/cornerstone-vagrant-cookbook.git
+    revision: 7bff84fa0d2d663e88aa368c3e6cff288a77aa77
   freebsd (= 0.1.4)
   git
     git: https://github.com/jssjr/git.git
@@ -49,6 +52,10 @@ GRAPH
   composer (1.0.4)
     php (>= 0.0.0)
     windows (>= 0.0.0)
+  cornerstone-vagrant (1.0.0)
+    php-webserver (>= 0.0.0)
+    platform_packages (>= 0.0.0)
+    web-developer-cookbook (>= 0.0.0)
   dmg (2.2.0)
   freebsd (0.1.4)
   git (4.0.3)
@@ -85,6 +92,7 @@ GRAPH
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     composer (>= 0.0.0)
+  platform_packages (0.4.2)
   runit (1.5.10)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
