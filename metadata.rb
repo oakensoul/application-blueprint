@@ -8,3 +8,4 @@ supports 'ubuntu'
 
 depends 'php-webserver'
 depends 'web-developer-cookbook'
+depends 'cornerstone-vagrant'
