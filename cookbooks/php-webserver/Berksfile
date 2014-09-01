@@ -1,9 +1,0 @@
-# vi: set ft=ruby :
-source 'https://api.berkshelf.com'
-
-metadata
-
-cookbook 'apt'
-cookbook 'build-essential'
-cookbook 'composer'
-cookbook 'apache2'
