@@ -6,8 +6,8 @@ cookbook 'cornerstone-vagrant', git: 'https://github.com/web-masons/cornerstone-
 cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'composer'
-cookbook 'apache2'
-cookbook 'freebsd', '=0.1.4'
+cookbook 'apache2', '= 1.10.4'
+cookbook 'platform_packages'
 
 cookbook 'php-webserver', git: 'https://github.com/turbine-web/php-webserver.git'
 cookbook 'web-developer-cookbook', git: 'https://github.com/turbine-web/web-developer-cookbook.git'

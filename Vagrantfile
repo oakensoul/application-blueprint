@@ -9,14 +9,23 @@ boxes = {
     :boxurl => 'https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_chef-11.4.4.box',
     :recipes => [
       'application-blueprint::default'
-    ]
+    ],
+    :json => {
+      'cornerstone-vagrant' => {
+        'project' => 'application-blueprint',
+        'siteslug' => 'vagrant.www.application-blueprint'
+      }
+    }
   }
 }
 
 # define servers
 servers = [
   {
-    :hostname => 'vagrant.www.application-blueprint.com', :ip => '192.168.2.3', :type => 'php', :primary => true
+    :hostname => 'vagrant.www.application-blueprint.com',
+    :ip => '192.168.2.3',
+    :type => 'php',
+    :primary => true
   }
 ]
 
@@ -60,17 +69,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           "cookbooks"
         ]
 
-        chef.json = {
-            'cornerstone-vagrant' => {
-                'project' => 'application-blueprint'
-            }
-        }
+        chef.json = boxes[server[:type]][:json]
 
         boxes[server[:type]][:recipes].each do |recipe|
           chef.add_recipe recipe
         end
       end
-
 
     end
   end

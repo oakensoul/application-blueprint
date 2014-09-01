@@ -1,21 +1,21 @@
 {
-    "name": "oakensoul/application-skeleton",
-    "description": "Base Application Skeleton",
-    "license": "BSD-2-Clause",
+    "name": "oakensoul/application-blueprint",
+    "description": "Cornerstone Application Blueprint",
+    "license": "Apache-2.0",
     "keywords": [
         "framework",
         "zf2",
         "oakensoul",
         "skeleton"
     ],
-    "homepage": "https://github.com/oakensoul/application-skeleton/",
+    "homepage": "https://github.com/oakensoul/application-blueprint/",
     "require": {
         "php": ">=5.4",
         "zendframework/zendframework": ">=2.2"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
-        "oakensoul/Cornerstone" : "0.*"
+        "web-masons/Cornerstone" : "0.*"
     },
     "minimum-stability": "stable",
     "autoload": {
@@ -29,7 +29,7 @@
     "repositories": [
       {
         "type": "vcs",
-        "url": "https://github.com/oakensoul/Cornerstone"
+        "url": "https://github.com/web-masons/Cornerstone"
       },
       {
         "type": "composer",

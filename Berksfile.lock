@@ -1,5 +1,5 @@
 DEPENDENCIES
-  apache2
+  apache2 (= 1.10.4)
   application-blueprint
     path: .
     metadata: true
@@ -12,7 +12,6 @@ DEPENDENCIES
   cornerstone-vagrant
     git: https://github.com/web-masons/cornerstone-vagrant-cookbook.git
     revision: 7bff84fa0d2d663e88aa368c3e6cff288a77aa77
-  freebsd (= 0.1.4)
   git
     git: https://github.com/jssjr/git.git
     revision: b1bca76aaf3a3a2131744f17f6e5087e22fa3c40
@@ -25,6 +24,7 @@ DEPENDENCIES
   php-webserver
     git: https://github.com/turbine-web/php-webserver.git
     revision: 8be1397d1e06e610eb4218c1087feefecf5d9817
+  platform_packages
   web-developer-cookbook
     git: https://github.com/turbine-web/web-developer-cookbook.git
     revision: f317e48ddec231dbdd8252d41474a927fef0d75d
@@ -32,11 +32,12 @@ DEPENDENCIES
 GRAPH
   7-zip (1.0.2)
     windows (>= 1.2.2)
-  apache2 (2.0.0)
+  apache2 (1.10.4)
     iptables (>= 0.0.0)
     logrotate (>= 0.0.0)
     pacman (>= 0.0.0)
   application-blueprint (1.0.0)
+    cornerstone-vagrant (>= 0.0.0)
     php-webserver (>= 0.0.0)
     web-developer-cookbook (>= 0.0.0)
   apt (2.5.3)
@@ -57,7 +58,6 @@ GRAPH
     platform_packages (>= 0.0.0)
     web-developer-cookbook (>= 0.0.0)
   dmg (2.2.0)
-  freebsd (0.1.4)
   git (4.0.3)
     build-essential (>= 0.0.0)
     dmg (>= 0.0.0)
@@ -69,7 +69,7 @@ GRAPH
     nodejs (>= 0.0.0)
   iis (2.1.2)
     windows (>= 1.2.6)
-  iptables (0.13.2)
+  iptables (0.14.0)
   java (1.27.0)
   logrotate (1.6.0)
   mysql (5.4.4)
