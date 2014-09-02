@@ -1,5 +1,5 @@
 {
-    "name": "oakensoul/application-blueprint",
+    "name": "web-masons/application-blueprint",
     "description": "Cornerstone Application Blueprint",
     "license": "Apache-2.0",
     "keywords": [
@@ -8,7 +8,7 @@
         "oakensoul",
         "skeleton"
     ],
-    "homepage": "https://github.com/oakensoul/application-blueprint/",
+    "homepage": "https://github.com/web-masons/application-blueprint/",
     "require": {
         "php": ">=5.4",
         "zendframework/zendframework": ">=2.2"
