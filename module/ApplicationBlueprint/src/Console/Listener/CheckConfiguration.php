@@ -77,7 +77,7 @@ class CheckConfiguration extends EventManager\AbstractListenerAggregate implemen
              * value you may want to set a dummy unacceptable value, etc.
              */
 
-            if ( 'example' == $config['Installation']['Vhost']['Server']['Domain'] )
+            if ('example' == $config['Installation']['Vhost']['Server']['Domain'])
             {
                 $error_message = 'Application config error, Installation->Vhost->Server->Domain is still set to default value.';
 
@@ -90,7 +90,7 @@ class CheckConfiguration extends EventManager\AbstractListenerAggregate implemen
                 throw new Exception($error_message);
             }
 
-            if ( 'app-skeleton.' == $config['Installation']['Vhost']['Server']['Region'] )
+            if ('app-skeleton.' == $config['Installation']['Vhost']['Server']['Region'])
             {
                 $error_message = 'Application config error, Installation->Vhost->Server->Region is still set to default value.';
 
@@ -110,6 +110,7 @@ class CheckConfiguration extends EventManager\AbstractListenerAggregate implemen
             $response = new Response();
             $response->setErrorLevel(1);
             $response->setContent('Exception Encountered: ' . $e->getMessage());
+
             return $response;
         }
     }
