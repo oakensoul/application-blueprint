@@ -34,9 +34,6 @@ $controllers = array (
  * http://framework.zend.com/manual/2.2/en/modules/zend.view.quick-start.html
  */
 $view_manager = array (
-    'template_map' => array (
-        'application/index/index' => __DIR__ . '/../view/application/index/index.phtml'
-    ),
     'template_path_stack' => array (
         __DIR__ . '/../view'
     )
